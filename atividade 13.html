@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Atividade 13</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+<script type="text/javascript">
+  	
+	
+  	$(document).ready(function(){
+ 	$("a").ready(function(event){
+  	$("#cookies").hide("slow"); 
+ 	});
+	})
+  	
+	
+	$(document).ready(function(){
+	$("#cor").click(function(){
+	$("#cor").css("background","red");	
+	});
+	})
+
+	$(function(){
+		$("#alteranome").hover(
+			function(){
+				
+			jQuery("#alteranome").html("desapego-taua.com");
+			},
+			function(){
+				
+				
+				jQuery("#alteranome").html("desapego.com");
+
+			}
+		);
+	});
+	
+	$(document).ready(function() { 
+	$("button").click(function(event) {
+		$("#conteudo").load('https://jsonplaceholder.typicode.com/posts/1​',aviso());
+	});
+});
+function aviso(){
+	alert('O conteúdo será carregado agora!');
+	
+} 
+</script>
+
+</head>
+<body>
+
+	<p>Olá, bem vindo ao meu site</p>
+
+	<span id="alteranome">desapego.com.</span></p>
+	<p id="cookies"> +++ Site com cookies configurados+++</p>
+	<p id="cor">click aqui para mudar para cor vermelha</p>
+	<p>click aqui para alterar entre cor verde e amarelo</p>
+	<button >Clique me AJAX GET</button>
+	<button>Clique me AJAX POST</button>
+
+</body>
+</html>
